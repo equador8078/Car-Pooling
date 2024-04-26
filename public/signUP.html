@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .form-container {
+            display: flex;
+            background-color: #080534;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 600px;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-section {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #601b95;
+            /* Green background */
+            border: none;
+            /* Remove default border */
+            color: white;
+            /* White text color */
+            padding: 10px 30px;
+            /* Padding for space around text */
+            text-align: center;
+            /* Center align text */
+            display: inline-block;
+            /* Display as inline-block element */
+            font-size: 16px;
+            /* Font size */
+            cursor: pointer;
+            /* Add cursor pointer on hover */
+            border-radius: 8px;
+            /* Rounded corners */
+        }
+
+        button:hover {
+            background-color: #0a0554;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .image {
+            width: 100%;
+            margin-top: 130px;
+            border-radius: 3px;
+            border: 5px solid;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="form-container">
+        <form id="signup-form" action="/sign" method="POST" onsubmit="return validatesignupForm()">
+            <div class="form-section">
+                <h2 style="font-size: 30px;">Create Account</h2>
+                <label for="fname">First Name:</label>
+                <input type="text" id="fname" name="firstName" required />
+
+                <label for="lname">Last Name:</label>
+                <input type="text" id="lname" name="lastName" required />
+
+                <label for="gmail-id">Gmail ID:</label>
+                <input type="email" id="gmail-id" name="email" required />
+
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="password" required />
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirmPassword" required />
+                <button class="button" type="submit">Sign Up</button>
+            </div>
+            <div class="form-section">
+                <img class="image" src=" ../image/carpool_signup.webp" alt="Image" />
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    document.getElementById("signup-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        // Add code to handle form submission, such as sending data to server or performing validation
+        // After form submission, navigate to the login page
+        window.location.href = "/login";
+    });
+</script>
+<script src="../javascript/signUP.js"></script>
+</html>

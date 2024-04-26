@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Box Layout</title>
+    <style>
+        /* Your CSS styles */
+        /* Style the container to display flex and fill the viewport */
+        .container {
+            background-color: #090d32;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Style the left-half div to take up half of the container's width */
+        .left-half {
+            width: 50%;
+        }
+
+        /* Style the map to fill the left-half div */
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Style the right-half div to take up half of the container's width */
+        .right-half {
+            width: 50%;
+            padding: 20px;
+            /* Add padding as needed */
+        }
+
+        /* Style the box inside the right-half div */
+        .box {
+            background-color: #d6d3d3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left half for the map -->
+        <div class="left-half">
+            <div id="map"></div>
+        </div>
+
+        <!-- Right half for the box -->
+        <div class="right-half">
+            <div class="box">
+                <!-- Content for the box, such as ride details -->
+                <h2>Ride Details</h2>
+                <p>Some information about the ride...</p>
+                <div id="driver-details"></div>
+                <div id="fare"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include the Google Maps API script with your API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmX2azRMVP079-UttkXRXxIPEM74yDBCc&callback=initMap" async defer></script>
+
+    <!-- Include the map.js file -->
+    <script src="../javascript/map.js"></script>
+    <script src="../javascript/driversdetail.js">  </script>
+</body>
+
+</html>

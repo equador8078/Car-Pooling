@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        .button-bar {
+            display: flex;
+            border-top: 2px solid #878484;
+            /* Add a solid border above the button bar */
+            border-bottom: 2px solid #878484;
+            /* Add a solid border below the button bar */
+            padding: 10px 0;
+            /* Add some padding for spacing */
+            justify-content: center;
+            margin: 3em 0;
+        }
+
+
+        .button-item {
+            font-size: 25px;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            color: #000000;
+            padding: 0.3em .6em;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+
+        .container {
+            display: flex;
+            /* Use flexbox layout */
+            width: 100%;
+        }
+
+
+
+        .image {
+            border-radius: 7px;
+            float: left;
+            margin-right: 100px;
+            height: 400px;
+            width: 600px;
+            flex: 1;
+        }
+
+        .input-bar,
+        .image {
+            flex: 1;
+        }
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg-container {
+            height: 100%;
+            width: 100%;
+            /* Adjust the width to cover half of the body */
+            background-color: #080534;
+            /* Set the background color */
+            float: left;
+            /* Float the container to the left */
+        }
+
+        .content-container,
+        .image-container {
+            flex: 1;
+        }
+
+        .content-container {
+            width: 50%;
+            /* Half of the screen */
+            padding: 0 20px;
+            /* Add padding for spacing */
+        }
+
+        .coustom-button {
+            background-color: #601b95;
+            /* Green background */
+            border: none;
+            /* Remove default border */
+            color: white;
+            /* White text color */
+            padding: 10px 30px;
+            /* Padding for space around text */
+            text-align: center;
+            /* Center align text */
+            display: inline-block;
+            /* Display as inline-block element */
+            font-size: 16px;
+            /* Font size */
+            cursor: pointer;
+            /* Add cursor pointer on hover */
+            border-radius: 8px;
+            /* Rounded corners */
+        }
+
+        .coustom-button:hover{
+            background-color: #0a0554;
+        }
+
+        .button-item:hover {
+            background-color: #bababc;
+            cursor: pointer;
+        }
+
+        .button-item:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #b1afaf;
+        }
+
+        .input-bar {
+            float: right;
+            margin-top: 100px;
+            margin-left: 50px;
+            justify-content: center;
+
+        }
+
+        .input-field {
+            font-size: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            flex-grow: 1;
+        }
+
+        .input-field:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #ffffff;
+        }
+
+        @media screen and (max-width: 768px) {
+            .image {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-container">
+        <header>
+            <h1 style="font-size: 60px; color: #ffffff; margin-left: 25px;">RideShare</h1>
+        </header>
+
+        <main>
+
+            <div class="button-bar">
+                <button class="button-item" id="newDriverBtn">New Driver</button>
+                <button class="button-item" id="driversBtn">Drivers</button>
+                <button class="button-item" id="businessBtn">Business</button>
+                <button class="button-item" id="aboutBtn">About</button>
+                <button class="button-item" id="logInBtn">Log In</button>
+                <button class="button-item" id="signUpBtn">Sign Up</button>
+
+            </div>
+
+            
+            <div class="container">
+                <div class="input-bar">
+                    <input type="text" id="destination" placeholder="Destination" class="input-field"><br><br>
+                    <input type="text" id="location" placeholder="Your Location" class="input-field"><br><br>
+                    <button id="searchBtn" style="font-size: 15px;
+                            background-color: #601b95;
+                            color: white;
+                            border: none;
+                            padding: 10px 30px;
+                            text-align: center;
+                            display: inline-block;
+                            font-size: 16px;
+                            border-radius: 8px;
+                            margin: 20px 20px;">Search</button>
+                </div>
+
+                <div><img src="../image/img1.jpg" alt="img" class="image"></div>
+
+            </div>
+
+            <div class="button-bar">
+
+            </div>
+
+
+            <div class="container">
+                <div class="content-container">
+                    <h1 style="font-size: 40px;">Turn Every Mile into Money <br>
+                        Share Your Ride, Share the Wealth!
+                    </h1>
+                    <p style="font-size: 25px;">RideShare allow you to earn money by sharing your vehicle. </p>
+                    <button class="coustom-button" id="driversBtn2" >New Driver</button>
+                    <p>Already have an account?<a href="">Sign In</a></p>
+                </div>
+
+                <div class="image-container">
+                    <img class="image" src="../image/img3.avif" alt="Your Image">
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="container">
+                <div class="image-container">
+                    <img class="image" style src="../image/img4.jpg" alt="Your Image">
+                </div>
+                <div class="content-container">
+                    <h1 style="font-size: 40px;">Book Your Ride,<br> Increase the Savings!
+                    </h1>
+                    <p style="font-size: 25px;">RideShare allow you to save money, by taking lift by paying less. </p>
+                    <button class="coustom-button" id="booknow">Book Now</button>
+                </div>
+            </div>
+
+        </main>
+
+        <footer style="background-color: #080534;">
+
+            <h2 style="color: #ffffff; margin-left: 50px;">Contacts</h2>
+            <a href="" style="color: #ffffff; margin-left:50px;">Email</a><br>
+            <a href="" style="color: #ffffff; margin-left:50px;">Telephone</a>
+
+        </footer>
+    </div>
+</body>
+
+<script src="../javascript/home.js"></script>
+
+</html>
